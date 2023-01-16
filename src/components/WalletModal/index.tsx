@@ -5,7 +5,7 @@ import { sendAnalyticsEvent, user } from 'analytics'
 import { CUSTOM_USER_PROPERTIES, EventName, WALLET_CONNECTION_RESULT } from 'analytics/constants'
 import { sendEvent } from 'components/analytics'
 import { AutoColumn } from 'components/Column'
-import { AutoRow } from 'components/Row'
+// import { AutoRow } from 'components/Row'
 import { networkConnection } from 'connection'
 import { getConnection, getConnectionName, getIsCoinbaseWallet, getIsInjected, getIsMetaMask } from 'connection/utils'
 import { NftVariant, useNftFlag } from 'featureFlags/flags/nft'
@@ -22,9 +22,9 @@ import { isMobile } from 'utils/userAgent'
 import { ReactComponent as Close } from '../../assets/images/x.svg'
 import { useModalIsOpen, useToggleWalletModal } from '../../state/application/hooks'
 import { ApplicationModal } from '../../state/application/reducer'
-import { ExternalLink, ThemedText } from '../../theme'
+// import { ExternalLink, ThemedText } from '../../theme'
 import AccountDetails from '../AccountDetails'
-import { LightCard } from '../Card'
+// import { LightCard } from '../Card'
 import Modal from '../Modal'
 import { CoinbaseWalletOption, OpenCoinbaseWalletOption } from './CoinbaseWalletOption'
 import { InjectedOption, InstallMetaMaskOption, MetaMaskOption } from './InjectedOption'
@@ -69,7 +69,7 @@ const HeaderRow = styled.div`
 `
 
 const ContentWrapper = styled.div`
-  background-color: ${({ theme }) => theme.backgroundSurface};
+  background: linear-gradient(to left, #e4d7c5, #c7a210);
   padding: 0 1rem 1rem 1rem;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -77,6 +77,7 @@ const ContentWrapper = styled.div`
 `
 
 const UpperSection = styled.div`
+  background: linear-gradient(to left, #e4d7c5, #c7a210);
   position: relative;
   h5 {
     margin: 0;
@@ -313,39 +314,6 @@ export default function WalletModal({
       )
     }
 
-    function getTermsOfService(nftFlagEnabled: boolean, walletView: string) {
-      if (nftFlagEnabled && walletView === WALLET_VIEWS.PENDING) return null
-      return nftFlagEnabled ? (
-        <AutoRow style={{ flexWrap: 'nowrap', padding: '4px 16px' }}>
-          <ThemedText.BodySecondary fontSize={16} lineHeight={'24px'}>
-            <Trans>
-              By connecting a wallet, you agree to Uniswap Labs’{' '}
-              <ExternalLink href="https://uniswap.org/terms-of-service/">Terms of Service</ExternalLink> and consent to
-              its <ExternalLink href="https://uniswap.org/privacy-policy">Privacy Policy</ExternalLink>.
-            </Trans>
-          </ThemedText.BodySecondary>
-        </AutoRow>
-      ) : (
-        <LightCard>
-          <AutoRow style={{ flexWrap: 'nowrap' }}>
-            <ThemedText.DeprecatedBody fontSize={12}>
-              <Trans>
-                By connecting a wallet, you agree to Uniswap Labs’{' '}
-                <ExternalLink style={{ textDecoration: 'underline' }} href="https://uniswap.org/terms-of-service/">
-                  Terms of Service
-                </ExternalLink>{' '}
-                and acknowledge that you have read and understand the Uniswap{' '}
-                <ExternalLink style={{ textDecoration: 'underline' }} href="https://uniswap.org/disclaimer/">
-                  Protocol Disclaimer
-                </ExternalLink>
-                .
-              </Trans>
-            </ThemedText.DeprecatedBody>
-          </AutoRow>
-        </LightCard>
-      )
-    }
-
     return (
       <UpperSection>
         <CloseIcon data-testid="wallet-modal-close" onClick={toggleWalletModal}>
@@ -363,7 +331,6 @@ export default function WalletModal({
               />
             )}
             {walletView !== WALLET_VIEWS.PENDING && <OptionGrid data-testid="option-grid">{getOptions()}</OptionGrid>}
-            {!pendingError && getTermsOfService(nftFlagEnabled, walletView)}
           </AutoColumn>
         </ContentWrapper>
       </UpperSection>
