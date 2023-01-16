@@ -12,7 +12,7 @@ import { RowBetween, RowFixed } from 'components/Row'
 import { SwitchLocaleLink } from 'components/SwitchLocaleLink'
 import { isSupportedChain } from 'constants/chains'
 import { useV3Positions } from 'hooks/useV3Positions'
-import { AlertTriangle, ChevronDown, ChevronsRight, Inbox, Layers, PlusCircle } from 'react-feather'
+import { AlertTriangle, ChevronDown, Inbox, Layers, PlusCircle } from 'react-feather'
 import { Link } from 'react-router-dom'
 import { useToggleWalletModal } from 'state/application/hooks'
 import { useUserHideClosedPositions } from 'state/user/hooks'
@@ -230,16 +230,16 @@ export default function Pool() {
       link: '/add/ETH',
       external: false,
     },
-    {
-      content: (
-        <MenuItem>
-          <Trans>Migrate</Trans>
-          <ChevronsRight size={16} />
-        </MenuItem>
-      ),
-      link: '/migrate/v2',
-      external: false,
-    },
+    // {
+    //   content: (
+    //     <MenuItem>
+    //       <Trans>Migrate</Trans>
+    //       <ChevronsRight size={16} />
+    //     </MenuItem>
+    //   ),
+    //   link: '/migrate/v2',
+    //   external: false,
+    // },
     {
       content: (
         <MenuItem>
