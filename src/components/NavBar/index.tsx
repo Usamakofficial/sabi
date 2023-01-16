@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import { Trans } from '@lingui/macro'
 import { useWeb3React } from '@web3-react/core'
 import Web3Status from 'components/Web3Status'
@@ -6,14 +7,13 @@ import { chainIdToBackendName } from 'graphql/data/util'
 import { useIsNftPage } from 'hooks/useIsNftPage'
 import { Box } from 'nft/components/Box'
 import { Row } from 'nft/components/Flex'
-import { UniIcon } from 'nft/components/icons'
+import logo from '../../assets/SAB.png'
+// import { UniIcon } from 'nft/components/icons'
 import { useIsMobile } from 'nft/hooks'
 import { ReactNode, useMemo } from 'react'
 import { NavLink, NavLinkProps, useLocation } from 'react-router-dom'
-
 import { ChainSelector } from './ChainSelector'
 import { MenuDropdown } from './MenuDropdown'
-import { SearchBar } from './SearchBar'
 import { ShoppingBag } from './ShoppingBag'
 import * as styles from './style.css'
 
@@ -57,9 +57,7 @@ const PageTabs = () => {
       <MenuItem href="/swap" isActive={pathname.startsWith('/swap')}>
         <Trans>Swap</Trans>
       </MenuItem>
-      <MenuItem href={`/tokens/${chainName.toLowerCase()}`} isActive={pathname.startsWith('/tokens')}>
-        <Trans>Tokens</Trans>
-      </MenuItem>
+
       {nftFlag === NftVariant.Enabled && (
         <MenuItem href="/nfts" isActive={isNftPage}>
           <Trans>NFTs</Trans>
@@ -68,6 +66,15 @@ const PageTabs = () => {
       <MenuItem href="/pool" id={'pool-nav-link'} isActive={isPoolActive}>
         <Trans>Pool</Trans>
       </MenuItem>
+      <a
+        href="https://www.sabifi.io/"
+        rel="noreferrer"
+        className="gradient-text"
+        target="_blank"
+        style={{ textDecoration: 'none', fontWeight: '850' }}
+      >
+        <Trans>NFTs</Trans>
+      </a>
     </>
   )
 }
@@ -102,7 +109,7 @@ const Navbar = () => {
         <Box display="flex" height="full" flexWrap="nowrap" alignItems="stretch">
           <Box className={styles.leftSideContainer}>
             <Box as="a" href="#/swap" className={styles.logoContainer}>
-              <UniIcon width="48" height="48" className={styles.logo} />
+              <img src={logo} width="130" height="130" style={{ padding: '3px 0 0 0' }} className={styles.logo} />
             </Box>
             {!isNftPage && (
               <Box display={{ sm: 'flex', lg: 'none' }}>
@@ -113,17 +120,8 @@ const Navbar = () => {
               <PageTabs />
             </Row>
           </Box>
-          <Box className={styles.middleContainer}>
-            <SearchBar />
-          </Box>
           <Box className={styles.rightSideContainer}>
             <Row gap="12">
-              <Box display={{ sm: 'flex', xl: 'none' }}>
-                <SearchBar />
-              </Box>
-              <Box display={{ sm: 'none', lg: 'flex' }}>
-                <MenuDropdown />
-              </Box>
               {isNftPage && <ShoppingBag />}
               {!isNftPage && (
                 <Box display={{ sm: 'none', lg: 'flex' }}>

@@ -12,7 +12,7 @@ import { RowBetween, RowFixed } from 'components/Row'
 import { SwitchLocaleLink } from 'components/SwitchLocaleLink'
 import { isSupportedChain } from 'constants/chains'
 import { useV3Positions } from 'hooks/useV3Positions'
-import { AlertTriangle, BookOpen, ChevronDown, ChevronsRight, Inbox, Layers, PlusCircle } from 'react-feather'
+import { AlertTriangle, ChevronDown, ChevronsRight, Inbox, Layers, PlusCircle } from 'react-feather'
 import { Link } from 'react-router-dom'
 import { useToggleWalletModal } from 'state/application/hooks'
 import { useUserHideClosedPositions } from 'state/user/hooks'
@@ -133,7 +133,7 @@ const ResponsiveButtonPrimary = styled(ButtonPrimary)`
 `
 
 const MainContentWrapper = styled.main`
-  background-color: ${({ theme }) => theme.deprecated_bg0};
+  background: linear-gradient(to left, #e4d7c5, #c7a210);
   border: 1px solid ${({ theme }) => theme.backgroundOutline};
   padding: 0;
   border-radius: 16px;
@@ -249,16 +249,6 @@ export default function Pool() {
       ),
       link: '/pool/v2',
       external: false,
-    },
-    {
-      content: (
-        <MenuItem>
-          <Trans>Learn</Trans>
-          <BookOpen size={16} />
-        </MenuItem>
-      ),
-      link: 'https://docs.uniswap.org/',
-      external: true,
     },
   ]
 

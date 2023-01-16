@@ -8,7 +8,6 @@ import { Trace } from 'analytics/Trace'
 import { TraceEvent } from 'analytics/TraceEvent'
 import { formatSwapQuoteReceivedEventProperties } from 'analytics/utils'
 import { sendEvent } from 'components/analytics'
-import { NetworkAlert } from 'components/NetworkAlert/NetworkAlert'
 import PriceImpactWarning from 'components/swap/PriceImpactWarning'
 import SwapDetailsDropdown from 'components/swap/SwapDetailsDropdown'
 import UnsupportedCurrencyFooter from 'components/swap/UnsupportedCurrencyFooter'
@@ -782,7 +781,6 @@ export default function Swap() {
               </div>
             </AutoColumn>
           </SwapWrapper>
-          <NetworkAlert />
         </PageWrapper>
         <SwitchLocaleLink />
         {!swapIsUnsupported ? null : (

@@ -10,8 +10,7 @@ const Card = styled(Box)<{ width?: string; padding?: string; border?: string; $b
 export default Card
 
 export const LightCard = styled(Card)`
-  border: 1px solid ${({ theme }) => theme.deprecated_bg2};
-  background-color: ${({ theme }) => theme.deprecated_bg1};
+  background-color: ${({ theme }) => theme.deprecated_bg3};
 `
 
 export const LightGrayCard = styled(Card)`

@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+// import { Trans } from '@lingui/macro'
 import { useWeb3React } from '@web3-react/core'
 import { AutoColumn } from 'components/Column'
 import { getChainInfoOrDefault } from 'constants/chainInfo'
@@ -95,28 +95,5 @@ export default function CTACards() {
   const { chainId } = useWeb3React()
   const { infoLink } = getChainInfoOrDefault(chainId)
 
-  return (
-    <CTASection>
-      <CTA1 href={'https://help.uniswap.org/en/articles/5391541-providing-liquidity-on-uniswap-v3'}>
-        <ResponsiveColumn>
-          <HeaderText>
-            <Trans>Learn about providing liquidity</Trans> ↗
-          </HeaderText>
-          <ThemedText.DeprecatedBody fontWeight={400} style={{ alignItems: 'center', display: 'flex' }}>
-            <Trans>Check out our v3 LP walkthrough and migration guides.</Trans>
-          </ThemedText.DeprecatedBody>
-        </ResponsiveColumn>
-      </CTA1>
-      <CTA2 data-testid="cta-infolink" href={infoLink + 'pools'}>
-        <ResponsiveColumn>
-          <HeaderText style={{ alignSelf: 'flex-start' }}>
-            <Trans>Top pools</Trans> ↗
-          </HeaderText>
-          <ThemedText.DeprecatedBody fontWeight={400} style={{ alignSelf: 'flex-start' }}>
-            <Trans>Explore Uniswap Analytics.</Trans>
-          </ThemedText.DeprecatedBody>
-        </ResponsiveColumn>
-      </CTA2>
-    </CTASection>
-  )
+  return <></>
 }

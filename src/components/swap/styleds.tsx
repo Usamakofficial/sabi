@@ -25,7 +25,7 @@ export const PageWrapper = styled.div`
 // Mostly copied from `AppBody` but it was getting too hard to maintain backwards compatibility.
 export const SwapWrapper = styled.main<{ margin?: string; maxWidth?: string }>`
   position: relative;
-  background: ${({ theme }) => theme.backgroundSurface};
+  background: linear-gradient(to left, #e4d7c5, #c7a210);
   border-radius: 16px;
   border: 1px solid ${({ theme }) => theme.backgroundOutline};
   padding: 8px;
@@ -41,7 +41,7 @@ export const ArrowWrapper = styled.div<{ clickable: boolean }>`
   margin-bottom: -18px;
   margin-left: auto;
   margin-right: auto;
-  background-color: ${({ theme }) => theme.backgroundInteractive};
+  background-color: background: linear-gradient(to left, #e4d7c5, #c7a210);;
   border: 4px solid;
   border-color: ${({ theme }) => theme.backgroundSurface};
 
