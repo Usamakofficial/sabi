@@ -49,7 +49,7 @@ const CloseColor = styled(Close)`
 
 const Wrapper = styled.div`
   ${({ theme }) => theme.flexColumnNoWrap}
-  background-color: ${({ theme }) => theme.backgroundSurface};
+  background-color: linear-gradient(to left, #e4d7c5, #c7a210);
   outline: ${({ theme }) => `1px solid ${theme.backgroundOutline}`};
   box-shadow: ${({ theme }) => theme.deepShadow};
   margin: 0;

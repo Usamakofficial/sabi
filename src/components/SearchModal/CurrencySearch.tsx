@@ -29,7 +29,7 @@ import CurrencyList from './CurrencyList'
 import { PaddedColumn, SearchInput, Separator } from './styleds'
 
 const ContentWrapper = styled(Column)`
-  background-color: ${({ theme }) => theme.backgroundSurface};
+  background-color: linear-gradient(to left, #e4d7c5, #c7a210);
   width: 100%;
   flex: 1 1;
   position: relative;

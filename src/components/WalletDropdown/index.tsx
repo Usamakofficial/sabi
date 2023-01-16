@@ -16,7 +16,7 @@ const WalletWrapper = styled.div`
   font-size: 16px;
   top: 60px;
   right: 70px;
-  background-color: ${({ theme }) => theme.backgroundSurface};
+  background-color: linear-gradient(to left, #e4d7c5, #c7a210);
   border: ${({ theme }) => `1px solid ${theme.backgroundOutline}`};
   box-shadow: ${({ theme }) => theme.deepShadow};
   padding: 16px 0;
@@ -36,12 +36,14 @@ export enum MenuState {
 }
 
 const WalletDropdownWrapper = styled.div`
+  background-color: linear-gradient(to left, #e4d7c5, #c7a210);
   position: fixed;
   top: 72px;
   right: 20px;
   z-index: ${Z_INDEX.dropdown};
 
   @media only screen and (max-width: ${({ theme }) => `${theme.breakpoint.sm}px`}) {
+    background-color: linear-gradient(to left, #e4d7c5, #c7a210);
     top: unset;
     left: 0;
     right: 0;

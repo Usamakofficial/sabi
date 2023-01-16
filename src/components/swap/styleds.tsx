@@ -41,7 +41,7 @@ export const ArrowWrapper = styled.div<{ clickable: boolean }>`
   margin-bottom: -18px;
   margin-left: auto;
   margin-right: auto;
-  background-color: background: linear-gradient(to left, #e4d7c5, #c7a210);;
+  background: linear-gradient(to left, #e4d7c5, #c7a210);
   border: 4px solid;
   border-color: ${({ theme }) => theme.backgroundSurface};
 

@@ -9,7 +9,6 @@ import styled, {
 
 import { cssStringFromTheme } from '../nft/css/cssStringFromTheme'
 import { darkTheme } from '../nft/themes/darkTheme'
-import { lightTheme } from '../nft/themes/lightTheme'
 import { useIsDarkMode } from '../state/user/hooks'
 import { colors as ColorsPalette, colorsDark, colorsLight } from './colors'
 import { AllColors, Colors, ThemeColors } from './styled'
@@ -66,48 +65,48 @@ const deprecated_mediaWidthTemplates: { [width in keyof typeof MEDIA_WIDTHS]: ty
   return accumulator
 }, {}) as any
 
-const deprecated_white = ColorsPalette.white
+const deprecated_white = ColorsPalette.black
 const deprecated_black = ColorsPalette.black
 
 function uniswapThemeColors(darkMode: boolean): ThemeColors {
   return {
-    userThemeColor: darkMode ? colorsDark.userThemeColor : colorsLight.userThemeColor,
+    userThemeColor: darkMode ? colorsDark.userThemeColor : colorsDark.userThemeColor,
 
-    background: darkMode ? colorsDark.background : colorsLight.background,
-    backgroundBackdrop: darkMode ? colorsDark.backgroundBackdrop : colorsLight.backgroundBackdrop,
-    backgroundSurface: darkMode ? colorsDark.backgroundSurface : colorsLight.backgroundSurface,
-    backgroundModule: darkMode ? colorsDark.backgroundModule : colorsLight.backgroundModule,
-    backgroundFloating: darkMode ? colorsDark.backgroundFloating : colorsLight.backgroundFloating,
-    backgroundInteractive: darkMode ? colorsDark.backgroundInteractive : colorsLight.backgroundInteractive,
-    backgroundOutline: darkMode ? colorsDark.backgroundOutline : colorsLight.backgroundOutline,
-    backgroundScrim: darkMode ? colorsDark.backgroundScrim : colorsLight.backgroundScrim,
+    background: darkMode ? colorsDark.background : colorsDark.background,
+    backgroundBackdrop: darkMode ? colorsDark.backgroundBackdrop : colorsDark.backgroundBackdrop,
+    backgroundSurface: darkMode ? colorsDark.backgroundSurface : colorsDark.backgroundSurface,
+    backgroundModule: darkMode ? colorsDark.backgroundModule : colorsDark.backgroundModule,
+    backgroundFloating: darkMode ? colorsDark.backgroundFloating : colorsDark.backgroundFloating,
+    backgroundInteractive: darkMode ? colorsDark.backgroundInteractive : colorsDark.backgroundInteractive,
+    backgroundOutline: darkMode ? colorsDark.backgroundOutline : colorsDark.backgroundOutline,
+    backgroundScrim: darkMode ? colorsDark.backgroundScrim : colorsDark.backgroundScrim,
 
-    textPrimary: darkMode ? colorsDark.textPrimary : colorsLight.textPrimary,
-    textSecondary: darkMode ? colorsDark.textSecondary : colorsLight.textSecondary,
-    textTertiary: darkMode ? colorsDark.textTertiary : colorsLight.textTertiary,
+    textPrimary: darkMode ? colorsDark.textPrimary : colorsDark.textPrimary,
+    textSecondary: darkMode ? colorsDark.textSecondary : colorsDark.textSecondary,
+    textTertiary: darkMode ? colorsDark.textTertiary : colorsDark.textTertiary,
 
-    accentAction: darkMode ? colorsDark.accentAction : colorsLight.accentAction,
-    accentActive: darkMode ? colorsDark.accentActive : colorsLight.accentActive,
-    accentSuccess: darkMode ? colorsDark.accentSuccess : colorsLight.accentSuccess,
-    accentWarning: darkMode ? colorsDark.accentWarning : colorsLight.accentWarning,
-    accentFailure: darkMode ? colorsDark.accentFailure : colorsLight.accentFailure,
-    accentCritical: darkMode ? colorsDark.accentCritical : colorsLight.accentCritical,
+    accentAction: darkMode ? colorsDark.accentAction : colorsDark.accentAction,
+    accentActive: darkMode ? colorsDark.accentActive : colorsDark.accentActive,
+    accentSuccess: darkMode ? colorsDark.accentSuccess : colorsDark.accentSuccess,
+    accentWarning: darkMode ? colorsDark.accentWarning : colorsDark.accentWarning,
+    accentFailure: darkMode ? colorsDark.accentFailure : colorsDark.accentFailure,
+    accentCritical: darkMode ? colorsDark.accentCritical : colorsDark.accentCritical,
 
-    accentActionSoft: darkMode ? colorsDark.accentActionSoft : colorsLight.accentActionSoft,
-    accentActiveSoft: darkMode ? colorsDark.accentActiveSoft : colorsLight.accentActiveSoft,
-    accentSuccessSoft: darkMode ? colorsDark.accentSuccessSoft : colorsLight.accentSuccessSoft,
-    accentWarningSoft: darkMode ? colorsDark.accentWarningSoft : colorsLight.accentWarningSoft,
-    accentFailureSoft: darkMode ? colorsDark.accentFailureSoft : colorsLight.accentFailureSoft,
+    accentActionSoft: darkMode ? colorsDark.accentActionSoft : colorsDark.accentActionSoft,
+    accentActiveSoft: darkMode ? colorsDark.accentActiveSoft : colorsDark.accentActiveSoft,
+    accentSuccessSoft: darkMode ? colorsDark.accentSuccessSoft : colorsDark.accentSuccessSoft,
+    accentWarningSoft: darkMode ? colorsDark.accentWarningSoft : colorsDark.accentWarningSoft,
+    accentFailureSoft: darkMode ? colorsDark.accentFailureSoft : colorsDark.accentFailureSoft,
 
-    accentTextDarkPrimary: darkMode ? colorsDark.accentTextDarkPrimary : colorsLight.accentTextDarkPrimary,
-    accentTextDarkSecondary: darkMode ? colorsDark.accentTextDarkSecondary : colorsLight.accentTextDarkSecondary,
-    accentTextDarkTertiary: darkMode ? colorsDark.accentTextDarkTertiary : colorsLight.accentTextDarkTertiary,
+    accentTextDarkPrimary: darkMode ? colorsDark.accentTextDarkPrimary : colorsDark.accentTextDarkPrimary,
+    accentTextDarkSecondary: darkMode ? colorsDark.accentTextDarkSecondary : colorsDark.accentTextDarkSecondary,
+    accentTextDarkTertiary: darkMode ? colorsDark.accentTextDarkTertiary : colorsDark.accentTextDarkTertiary,
 
-    accentTextLightPrimary: darkMode ? colorsDark.accentTextLightPrimary : colorsLight.accentTextLightPrimary,
-    accentTextLightSecondary: darkMode ? colorsDark.accentTextLightSecondary : colorsLight.accentTextLightSecondary,
-    accentTextLightTertiary: darkMode ? colorsDark.accentTextLightTertiary : colorsLight.accentTextLightTertiary,
+    accentTextLightPrimary: darkMode ? colorsDark.accentTextLightPrimary : colorsDark.accentTextLightPrimary,
+    accentTextLightSecondary: darkMode ? colorsDark.accentTextLightSecondary : colorsDark.accentTextLightSecondary,
+    accentTextLightTertiary: darkMode ? colorsDark.accentTextLightTertiary : colorsDark.accentTextLightTertiary,
 
-    white: ColorsPalette.white,
+    white: ColorsPalette.black,
     black: ColorsPalette.black,
 
     // chain colors are same for light/dark mode
@@ -123,12 +122,12 @@ function uniswapThemeColors(darkMode: boolean): ThemeColors {
     chain_421611: colorsDark.chain_421611,
     chain_80001: colorsDark.chain_80001,
 
-    shallowShadow: darkMode ? colorsDark.shallowShadow : colorsLight.shallowShadow,
-    deepShadow: darkMode ? colorsDark.deepShadow : colorsLight.deepShadow,
+    shallowShadow: darkMode ? colorsDark.shallowShadow : colorsDark.shallowShadow,
+    deepShadow: darkMode ? colorsDark.deepShadow : colorsDark.deepShadow,
     hoverState: opacify(24, ColorsPalette.blue200),
     hoverDefault: opacify(8, ColorsPalette.gray200),
-    stateOverlayHover: darkMode ? colorsDark.stateOverlayHover : colorsLight.stateOverlayHover,
-    stateOverlayPressed: darkMode ? colorsDark.stateOverlayPressed : colorsLight.stateOverlayPressed,
+    stateOverlayHover: darkMode ? colorsDark.stateOverlayHover : colorsDark.stateOverlayHover,
+    stateOverlayPressed: darkMode ? colorsDark.stateOverlayPressed : colorsDark.stateOverlayPressed,
   }
 }
 
@@ -140,56 +139,56 @@ function oldColors(darkMode: boolean): Colors {
     deprecated_black,
 
     // text
-    deprecated_text1: darkMode ? colorsDark.textPrimary : colorsLight.textPrimary,
-    deprecated_text2: darkMode ? colorsDark.textSecondary : colorsLight.textSecondary,
-    deprecated_text3: darkMode ? colorsDark.textTertiary : colorsLight.textTertiary,
-    deprecated_text4: darkMode ? ColorsPalette.gray200 : ColorsPalette.gray300,
-    deprecated_text5: darkMode ? ColorsPalette.gray500 : ColorsPalette.gray50,
+    deprecated_text1: darkMode ? colorsDark.textPrimary : colorsDark.textPrimary,
+    deprecated_text2: darkMode ? colorsDark.textSecondary : colorsDark.textSecondary,
+    deprecated_text3: darkMode ? colorsDark.textTertiary : colorsDark.textTertiary,
+    deprecated_text4: darkMode ? ColorsPalette.gray200 : ColorsPalette.gray200,
+    deprecated_text5: darkMode ? ColorsPalette.gray500 : ColorsPalette.gray500,
 
     // backgrounds / grays
-    deprecated_bg0: darkMode ? ColorsPalette.gray900 : ColorsPalette.white,
-    deprecated_bg1: darkMode ? ColorsPalette.gray800 : ColorsPalette.gray50,
-    deprecated_bg2: darkMode ? ColorsPalette.gray700 : ColorsPalette.gray100,
-    deprecated_bg3: darkMode ? ColorsPalette.gray600 : ColorsPalette.gray200,
-    deprecated_bg4: darkMode ? ColorsPalette.gray500 : ColorsPalette.gray300,
+    deprecated_bg0: darkMode ? ColorsPalette.gray900 : ColorsPalette.gray900,
+    deprecated_bg1: darkMode ? ColorsPalette.gray800 : ColorsPalette.gray800,
+    deprecated_bg2: darkMode ? ColorsPalette.gray700 : ColorsPalette.gray700,
+    deprecated_bg3: darkMode ? ColorsPalette.gray600 : ColorsPalette.gray600,
+    deprecated_bg4: darkMode ? ColorsPalette.gray500 : ColorsPalette.gray500,
     deprecated_bg5: darkMode ? ColorsPalette.gray400 : ColorsPalette.gray400,
-    deprecated_bg6: darkMode ? ColorsPalette.gray300 : ColorsPalette.gray500,
+    deprecated_bg6: darkMode ? ColorsPalette.gray300 : ColorsPalette.gray300,
 
     //specialty colors
-    deprecated_modalBG: darkMode ? opacify(40, ColorsPalette.black) : opacify(30, ColorsPalette.black),
-    deprecated_advancedBG: darkMode ? opacify(10, ColorsPalette.black) : opacify(60, ColorsPalette.white),
+    deprecated_modalBG: darkMode ? opacify(40, ColorsPalette.black) : opacify(40, ColorsPalette.black),
+    deprecated_advancedBG: darkMode ? opacify(10, ColorsPalette.black) : opacify(10, ColorsPalette.black),
 
     //primary colors
     deprecated_primary1: darkMode ? colorsDark.accentAction : colorsLight.accentAction,
-    deprecated_primary2: darkMode ? ColorsPalette.blue400 : ColorsPalette.pink300,
-    deprecated_primary3: darkMode ? ColorsPalette.blue300 : ColorsPalette.pink200,
-    deprecated_primary4: darkMode ? '#376bad70' : '#F6DDE8',
-    deprecated_primary5: darkMode ? '#153d6f70' : '#FDEAF1',
+    deprecated_primary2: darkMode ? ColorsPalette.blue400 : ColorsPalette.blue400,
+    deprecated_primary3: darkMode ? ColorsPalette.blue300 : ColorsPalette.blue300,
+    deprecated_primary4: darkMode ? '#376bad70' : '#376bad70',
+    deprecated_primary5: darkMode ? '#153d6f70' : '#153d6f70',
 
     // color text
-    deprecated_primaryText1: darkMode ? colorsDark.accentAction : colorsLight.accentAction,
+    deprecated_primaryText1: darkMode ? colorsDark.accentAction : colorsDark.accentAction,
 
     // secondary colors
-    deprecated_secondary1: darkMode ? colorsDark.accentAction : colorsLight.accentAction,
-    deprecated_secondary2: darkMode ? opacify(25, ColorsPalette.gray900) : '#F6DDE8',
-    deprecated_secondary3: darkMode ? opacify(25, ColorsPalette.gray900) : '#FDEAF1',
+    deprecated_secondary1: darkMode ? colorsDark.accentAction : colorsDark.accentAction,
+    deprecated_secondary2: darkMode ? opacify(25, ColorsPalette.gray900) : opacify(25, ColorsPalette.gray900),
+    deprecated_secondary3: darkMode ? opacify(25, ColorsPalette.gray900) : opacify(25, ColorsPalette.gray900),
 
     // other
-    deprecated_red1: darkMode ? colorsDark.accentFailure : colorsLight.accentFailure,
-    deprecated_red2: darkMode ? colorsDark.accentFailure : colorsLight.accentFailure,
-    deprecated_red3: darkMode ? colorsDark.accentFailure : colorsLight.accentFailure,
-    deprecated_green1: darkMode ? colorsDark.accentSuccess : colorsLight.accentSuccess,
+    deprecated_red1: darkMode ? colorsDark.accentFailure : colorsDark.accentFailure,
+    deprecated_red2: darkMode ? colorsDark.accentFailure : colorsDark.accentFailure,
+    deprecated_red3: darkMode ? colorsDark.accentFailure : colorsDark.accentFailure,
+    deprecated_green1: darkMode ? colorsDark.accentSuccess : colorsDark.accentSuccess,
     deprecated_yellow1: ColorsPalette.yellow400,
     deprecated_yellow2: ColorsPalette.yellow500,
     deprecated_yellow3: ColorsPalette.yellow600,
-    deprecated_blue1: darkMode ? colorsDark.accentAction : colorsLight.accentAction,
-    deprecated_blue2: darkMode ? colorsDark.accentAction : colorsLight.accentAction,
-    deprecated_error: darkMode ? colorsDark.accentFailure : colorsLight.accentFailure,
-    deprecated_success: darkMode ? colorsDark.accentSuccess : colorsLight.accentSuccess,
-    deprecated_warning: darkMode ? colorsDark.accentWarning : colorsLight.accentWarning,
+    deprecated_blue1: darkMode ? colorsDark.accentAction : colorsDark.accentAction,
+    deprecated_blue2: darkMode ? colorsDark.accentAction : colorsDark.accentAction,
+    deprecated_error: darkMode ? colorsDark.accentFailure : colorsDark.accentFailure,
+    deprecated_success: darkMode ? colorsDark.accentSuccess : colorsDark.accentSuccess,
+    deprecated_warning: darkMode ? colorsDark.accentWarning : colorsDark.accentWarning,
 
     // dont wanna forget these blue yet
-    deprecated_blue4: darkMode ? '#153d6f70' : '#C4D9F8',
+    deprecated_blue4: darkMode ? '#153d6f70' : '#153d6f70',
     // blue5: darkMode ? '#153d6f70' : '#EBF4FF',
     // deprecated_blue5: '#869EFF',
   }
@@ -207,7 +206,7 @@ function getTheme(darkMode: boolean): DefaultTheme {
     },
 
     //shadows
-    shadow1: darkMode ? '#000' : '#2F80ED',
+    shadow1: darkMode ? '#000' : '#000',
 
     // media queries
     deprecated_mediaWidth: deprecated_mediaWidthTemplates,
@@ -321,7 +320,7 @@ export const ThemedText = {
 export const ThemedGlobalStyle = createGlobalStyle`
 html {
   color: ${({ theme }) => theme.deprecated_text1};
-  background-color: ${({ theme }) => theme.background} !important;
+  background-color: linear-gradient(to left, #e4d7c5, #c7a210) !important;
 }
 
 a {
@@ -329,6 +328,6 @@ a {
 }
 
 :root {
-  ${({ theme }) => (theme.darkMode ? cssStringFromTheme(darkTheme) : cssStringFromTheme(lightTheme))}
+  ${({ theme }) => (theme.darkMode ? cssStringFromTheme(darkTheme) : cssStringFromTheme(darkTheme))}
 }
 `

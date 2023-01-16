@@ -249,28 +249,28 @@ export interface Palette {
 export const colorsLight: Palette = {
   userThemeColor: colors.magentaVibrant,
 
-  background: '#faf9fa', //INTENTIONALLY OFF THEME TO GIVE WHITE BG A SOFTER VISUAL
-  backgroundBackdrop: colors.white,
-  backgroundSurface: colors.white,
-  backgroundModule: colors.gray50,
-  backgroundInteractive: colors.gray100,
-  backgroundFloating: opacify(8, colors.gray700),
-  backgroundOutline: colors.gray150,
-  backgroundScrim: opacify(60, colors.gray900),
-  backgroundScrolledSurface: opacify(72, colors.white),
+  background: colors.gray800,
+  backgroundBackdrop: colors.black,
+  backgroundSurface: colors.gray900,
+  backgroundModule: colors.gray800,
+  backgroundInteractive: colors.gray700,
+  backgroundFloating: opacify(12, colors.black),
+  backgroundOutline: colors.gray750,
+  backgroundScrim: opacify(72, colors.gray900),
+  backgroundScrolledSurface: opacify(72, colors.gray900),
 
-  textPrimary: colors.gray900,
-  textSecondary: colors.gray400,
-  textTertiary: colors.gray300,
+  textPrimary: colors.white,
+  textSecondary: colors.gray300,
+  textTertiary: colors.gray500,
 
-  accentAction: colors.pink400,
+  accentAction: colors.blue400,
   accentActive: colors.blue400,
-  accentSuccess: colors.green300,
+  accentSuccess: colors.green200,
   accentWarning: colors.gold200,
-  accentFailure: colors.red400,
-  accentCritical: colors.red400,
+  accentFailure: colors.red300,
+  accentCritical: colors.red300,
 
-  accentActionSoft: opacify(24, colors.pink400),
+  accentActionSoft: opacify(24, colors.blue400),
   accentActiveSoft: opacify(24, colors.blue400),
   accentSuccessSoft: opacify(24, colors.green400),
   accentWarningSoft: opacify(24, colors.gold200),
@@ -281,7 +281,7 @@ export const colorsLight: Palette = {
   accentTextDarkTertiary: opacify(24, colors.gray900),
 
   accentTextLightPrimary: colors.gray50,
-  accentTextLightSecondary: opacify(60, colors.gray50),
+  accentTextLightSecondary: opacify(72, colors.gray50),
   accentTextLightTertiary: opacify(12, colors.gray50),
 
   white: colors.white,
@@ -294,7 +294,7 @@ export const colorsLight: Palette = {
   chain_10: colors.networkOptimism,
   chain_137: colors.networkPolygon,
   chain_42: colors.networkArbitrum,
-  chain_420: colors.networkOptimism,
+  chain_420: colors.networkEthereum,
   chain_42161: colors.networkEthereum,
   chain_421611: colors.networkEthereum,
   chain_80001: colors.networkPolygon,
@@ -302,10 +302,8 @@ export const colorsLight: Palette = {
   chain_10_background: colors.red900,
   chain_42161_background: colors.blue900,
 
-  deepShadow:
-    '8px 12px 20px rgba(51, 53, 72, 0.04), 4px 6px 12px rgba(51, 53, 72, 0.02), 4px 4px 8px rgba(51, 53, 72, 0.04);',
-  shallowShadow:
-    '6px 6px 10px rgba(51, 53, 72, 0.01), 2px 2px 6px rgba(51, 53, 72, 0.02), 1px 2px 2px rgba(51, 53, 72, 0.02);',
+  deepShadow: '12px 16px 24px rgba(0, 0, 0, 0.24), 12px 8px 12px rgba(0, 0, 0, 0.24), 4px 4px 8px rgba(0, 0, 0, 0.32);',
+  shallowShadow: '4px 4px 10px rgba(0, 0, 0, 0.24), 2px 2px 4px rgba(0, 0, 0, 0.12), 1px 2px 2px rgba(0, 0, 0, 0.12);',
   stateOverlayHover: opacify(8, colors.gray300),
   stateOverlayPressed: opacify(24, colors.gray200),
 }

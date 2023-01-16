@@ -1,28 +1,28 @@
-import { colorsDark, colorsLight } from './colors'
+import { colorsDark } from './colors'
 
 const fonts = {
   fontFamily: 'Inter custom',
 }
 
-export const LIGHT_THEME = {
-  // surface
-  container: colorsLight.backgroundSurface,
-  interactive: colorsLight.backgroundInteractive,
-  module: colorsLight.backgroundModule,
-  accent: colorsLight.accentAction,
-  dialog: colorsLight.backgroundBackdrop,
-  outline: colorsLight.backgroundOutline,
-  // text
-  primary: colorsLight.textPrimary,
-  secondary: colorsLight.textSecondary,
-  onInteractive: colorsLight.accentTextDarkPrimary,
-  // state
-  success: colorsLight.accentSuccess,
-  warning: colorsLight.accentWarning,
-  error: colorsLight.accentCritical,
+// export const LIGHT_THEME = {
+//   // surface
+//   container: colorsLight.backgroundSurface,
+//   interactive: colorsLight.backgroundInteractive,
+//   module: colorsLight.backgroundModule,
+//   accent: colorsLight.accentAction,
+//   dialog: colorsLight.backgroundBackdrop,
+//   outline: colorsLight.backgroundOutline,
+//   // text
+//   primary: colorsLight.textPrimary,
+//   secondary: colorsLight.textSecondary,
+//   onInteractive: colorsLight.accentTextDarkPrimary,
+//   // state
+//   success: colorsLight.accentSuccess,
+//   warning: colorsLight.accentWarning,
+//   error: colorsLight.accentCritical,
 
-  ...fonts,
-}
+//   ...fonts,
+// }
 
 export const DARK_THEME = {
   // surface

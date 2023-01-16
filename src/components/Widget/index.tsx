@@ -22,7 +22,7 @@ import {
 import { useActiveLocale } from 'hooks/useActiveLocale'
 import { useCallback, useState } from 'react'
 import { useIsDarkMode } from 'state/user/hooks'
-import { DARK_THEME, LIGHT_THEME } from 'theme/widget'
+import { DARK_THEME } from 'theme/widget'
 import { computeRealizedPriceImpact } from 'utils/prices'
 import { switchChain } from 'utils/switchChain'
 
@@ -35,7 +35,7 @@ export const WIDGET_WIDTH = 360
 const WIDGET_ROUTER_URL = 'https://api.uniswap.org/v1/'
 
 function useWidgetTheme() {
-  return useIsDarkMode() ? DARK_THEME : LIGHT_THEME
+  return useIsDarkMode() ? DARK_THEME : DARK_THEME
 }
 
 export interface WidgetProps {

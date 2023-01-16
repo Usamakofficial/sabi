@@ -83,6 +83,7 @@ const DefaultMenuWrap = styled.div`
   width: 100%;
   height: 100%;
   padding: 0 8px;
+  background-color: linear-gradient(to left, #e4d7c5, #c7a210);
 `
 
 const DefaultText = styled.span`
@@ -134,6 +135,10 @@ const WalletDropdown = ({ setMenu }: { setMenu: (state: MenuState) => void }) =>
           </IconWrap>
         </ToggleMenuItem>
       )}
+      {/* <ToggleMenuItem data-testid="wallet-select-theme" onClick={toggleDarkMode}>
+        <DefaultText>{darkMode ? <Trans> Light theme</Trans> : <Trans>Dark theme</Trans>}</DefaultText>
+        <IconWrap>{darkMode ? <Sun size={16} /> : <Moon size={16} />}</IconWrap>
+      </ToggleMenuItem> */}
     </DefaultMenuWrap>
   )
 }
